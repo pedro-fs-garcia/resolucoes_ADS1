@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+
+    <link rel="stylesheet" href="./static/style.css">
+
+</head>
+
+<body>
+    <!-- <hr class="top"> -->
+    <!-- cabeçalho -->
+    <div>
+        <img src="./static/imagens/logo.png" alt="logo">
+        <span class="links"><a href="/index" alt="página inicial">Página inicial</a> |
+            <a href="/quemsomos" alt="quem somos">Quem Somos</a> |
+            <a href="/contatos" alt="contatos">Contatos</a></span>
+            <br>
+    </div>
+    <!-- corpo e imagem -->
+    {% block content %}
+
+    {% endblock %}
+    <!-- rodapé -->
+    <div>
+        <br>
+        <h4>Todos os direitos reservados</h4>
+    </div>
+
+</body>
+
+</html>

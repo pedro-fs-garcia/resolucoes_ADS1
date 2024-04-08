@@ -1,0 +1,47 @@
+div {
+    /* border: 2px solid rgb(1, 10, 34); */
+}
+
+.titulo{
+    color:rgb(1, 22, 22);
+    font-size:36px;
+}
+
+.paragrafo{
+    font-size:16px;
+    text-align:left;
+}
+
+h4{
+    text-align: center;
+}
+
+body{
+    max-width:60%;
+    margin: 45px auto 0;
+    background-image:url(../static/imagens/fundo2.png);
+    
+}
+
+.home{
+    max-width:60%;
+    margin: 45px auto 0;
+    background-image:url(../static/imagens/fundo.png);
+    background-attachment:local;
+}
+
+.capa{
+    width: 100%;
+    height: auto;
+    
+}
+
+.top{
+    height:4px;
+    background-color:rgb(29, 37, 73);
+}
+
+.links{
+    float:right;
+    margin-top:20px;
+}
