@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Filmes{% endblock %}
+
+{% block page_title %}Filmes{% endblock %}
+
+{% block header_image %}<div class="header_image" style="background-image:url(/static/images/The_apartment_header.jpg); background-position: center -10px;"></div> {% endblock %}
+
+{% block content %}
+<h3>But what is a good movie...</h3>
+<p>That question is yet to be answered with any real precision. For now, my preferences will suffice.</p>
+    <div class="film_grid">
+        {% for name in directors %}
+            {% for film in directors[name] %}
+                <figure class="film_item"><a href="" target="_blank">
+                    <img class="film_poster" src="/static/images/films/{{film.replace(' ', '_')}}.jpg"><br>
+                    {{film.title()}}
+                </a></figure>
+            {% endfor %}
+        {% endfor %}
+    </div>
+
+
+{% endblock %}
