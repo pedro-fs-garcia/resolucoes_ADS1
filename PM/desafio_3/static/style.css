@@ -18,8 +18,8 @@
     line-height:60px;
 }
 
-.base_body h2{
-    margin-top: 15px
+h2{
+    font-weight: bold;
 }
 
 .base_body a{
@@ -46,6 +46,19 @@
 /* div{
     border: 2px solid black
 } */
+
+.biography{
+    display:grid;
+    align-items:center;
+    grid-template-columns:auto 1fr;
+    column-gap: 50px;
+    margin-top: 30px;
+}
+
+.biography h2{
+    font-weight:bold;
+    font-size: 24px
+}
 
 .director_details{
     background-color: #99928a;
