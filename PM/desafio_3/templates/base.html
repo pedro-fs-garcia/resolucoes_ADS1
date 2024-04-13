@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css"> 
     <title> {% block title %} {% endblock %} </title>
 </head>
-<body>
+<body class="base_body">
     <!-- header -->
     
     <!-- links -->
@@ -17,7 +18,7 @@
             <a class="links" href="/all_films">Filmes</a> | 
             <a class="links" href="/my_attempts">My attempts</a>
         </span>
-        <h1>{% block page_title %} {% endblock %}</h1>
+        <h1><strong>{% block page_title %} {% endblock %}</strong></h1>
     </div>
     <!-- <hr> -->
     {% block header_image %}{% endblock %}
@@ -27,9 +28,10 @@
     
     <!-- footer -->
     <hr>
-    <footer>
+    <footer class="base_footer">
         <h4>This page is an homage to that which I could not do</h4>
         <a href ='https://github.com/pedro-fs-garcia'>about the author</a>
     </footer>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
 </body>
 </html>
