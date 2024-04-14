@@ -35,12 +35,12 @@
                     <strong>The Apartment</strong>
                 </div>
                 {% for name in directors %}
-                {% for film in directors[name] %}
-                <div class="carousel-item" data-bs-interval="2000" style="text-align: center;">
-                    <img src="/static/images/films/{{film.replace(' ', '_')}}.jpg" style="height:400px"><br>
-                    <strong>{{film.title()}}</strong>
-                </div>
-                {% endfor %}
+                    {% for film in directors[name] %}
+                        <div class="carousel-item" data-bs-interval="2000" style="text-align: center;">
+                            <img src="/static/images/films/{{film.replace(' ', '_')}}.jpg" style="height:400px"><br>
+                            <strong>{{film.title()}}</strong>
+                        </div>
+                    {% endfor %}
                 {% endfor %}
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"

@@ -12,13 +12,15 @@
 <p>That question is yet to be answered with any real precision. For now, my preferences will suffice.</p>
     <div class="film_grid">
         {% for name in directors %}
-            {% for film in directors[name] %}
-                <figure class="film_item"><a href="" target="_blank">
-                    <img class="film_poster" src="/static/images/films/{{film.replace(' ', '_')}}.jpg"><br>
-                    {{film.title()}}
-                </a></figure>
-            {% endfor %}
+        {% for film in directors[name] %}
+        <div class="card" style="width: auto; margin: 15px; background-color:">
+            <img src="/static/images/films/{{film.replace(' ', '_')}}.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{film.title()}}</h5>
+            </div>
+        </div>
         {% endfor %}
+        {%endfor%}
     </div>
 
 
