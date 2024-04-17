@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, request
 import json
 
 app = Flask(__name__)
@@ -6,15 +6,19 @@ app = Flask(__name__)
 
 @app.route("/")
 def home_page():
-    directors = json.load(open("./templates/directors_films.json"))
-    return render_template("index.html", directors = directors)
+    return redirect ("/home")
 
 
 @app.route("/<name>")
 def get_page(name):
     directors = json.load(open("./templates/directors_films.json"))
+    if request.method == "POST":
+        req = request.form
+        search = req["search"]
+        return redirect("/directors")
+    
     if name == "home":
-        return home_page()
+        return render_template(f"index.html", directors = directors)
     return render_template(f"{name}.html", directors = directors)
 
 

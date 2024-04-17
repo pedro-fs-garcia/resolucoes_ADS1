@@ -30,6 +30,7 @@
 
 
 .header_image{
+    max-width: 100%;
     text-align: center;
     height:250px;
     /* background-image: url(/static/images/f-for-fake-1200.jpg); */
@@ -110,7 +111,7 @@ summary{
 
 .film_grid{
     display:grid;
-    grid-template-columns:auto auto auto auto;
+    grid-template-columns:auto auto auto auto auto auto;
     width: 100%;
     padding:auto;
     margin-top: 30px;

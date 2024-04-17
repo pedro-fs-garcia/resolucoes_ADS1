@@ -9,8 +9,9 @@
 </head>
 <body class="base_body">
     <!-- header -->
-    <nav class="navbar fixed-top" style="max-width:80%; margin:auto; background-color: rgb(223, 221, 218); height:58px">
-        <h1><strong>{% block page_title %} {% endblock %}</strong></h1>
+    <nav class="navbar fixed-top" style="max-width:90%; margin:auto; background-color: rgb(223, 221, 218); height:56px">
+
+      <h1><strong>{% block page_title %} {% endblock %}</strong></h1>
         <ul class="nav nav-tabs">
             <li class="nav-item">
               <a class="nav-link {% block active_index %}{% endblock %}" href="/">Página Inicial</a>
@@ -22,10 +23,15 @@
               <a class="nav-link  {% block active_all_films %}{% endblock %}" href="/all_films">Filmes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#">Minhas tentativas</a>
+              <form class="search-bar">
+                <label for="search" method="POST">
+                  <input type="text" id="search" name="search" style="margin-top: 6px;">
+                </label>
+              </form>
             </li>
           </ul>
     </nav>
+    <br>
     <!-- <hr> -->
     {% block header_image %}{% endblock %}
     
