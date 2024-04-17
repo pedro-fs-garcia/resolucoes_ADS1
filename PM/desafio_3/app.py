@@ -25,10 +25,13 @@ def get_answer():
     respostas={}
     acertos = 0
     for i in range(1, len(perguntas)+1):
-        respostas[f"answer{i}"] = request.form[f"answer{i}"]
+        try:
+            respostas[f"answer{i}"] = request.form[f"answer{i}"]
+        except KeyError:
+            respostas[f"answer{i}"] = ""
     
     for i in range(1, len(perguntas)+1):
-        if perguntas[f"Questão {i}"][5] == respostas[f"answer{i}"]:
+        if perguntas[f"{i}"][5] == respostas[f"answer{i}"]:
             acertos += 1
     
     return f"<h1>você teve {acertos} acertos</h1>"
