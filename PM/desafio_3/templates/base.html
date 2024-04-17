@@ -9,7 +9,7 @@
 </head>
 <body class="base_body">
     <!-- header -->
-    <nav class="navbar fixed-top" style="max-width:90%; margin:auto; background-color: rgb(223, 221, 218); height:56px">
+    <nav class="navbar fixed-top" style="max-width:80%; margin:auto; background-color: rgb(223, 221, 218); height:56px">
 
       <h1><strong>{% block page_title %} {% endblock %}</strong></h1>
         <ul class="nav nav-tabs">
@@ -23,10 +23,14 @@
               <a class="nav-link  {% block active_all_films %}{% endblock %}" href="/all_films">Filmes</a>
             </li>
             <li class="nav-item">
-              <form class="search-bar">
-                <label for="search" method="POST">
+              <a class="nav-link {% block active_research %}{% endblock %}" href="/research">Pesquisa</a>
+            </li>
+            <li class="nav-item" style="margin-left: 10px;">
+              <form class="search-bar" action="/result" method="POST">
+                <label for="search">
                   <input type="text" id="search" name="search" style="margin-top: 6px;">
                 </label>
+                <button type="submit" value="submit">Enviar</button>
               </form>
             </li>
           </ul>
