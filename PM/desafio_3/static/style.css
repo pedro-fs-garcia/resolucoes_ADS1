@@ -1,5 +1,5 @@
 .base_body{
-    max-width: 1200px;
+    max-width: 80%;
     margin: 0px auto 45px;
     font-family:'Courier New', Courier, monospace;
     background-color:rgb(223, 221, 218)
@@ -8,8 +8,8 @@
 .head{
     margin-top: 0px;
     height: 60px;
-    position:sticky;
-    top:0px;
+    /* position:sticky;
+    top:0px;*/
     background-color: rgb(223, 221, 218);
     border-bottom: 2px outset #333131;
 }

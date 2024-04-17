@@ -9,17 +9,23 @@
 </head>
 <body class="base_body">
     <!-- header -->
-    
-    <!-- links -->
-    <div class="head">
-        <span style="float:right; margin-block-start:20px;">
-            <a class="links" href="/">Página inicial</a> | 
-            <a class="links" href="/directors">Diretores</a> | 
-            <a class="links" href="/all_films">Filmes</a> | 
-            <a class="links" href="/my_attempts">My attempts</a>
-        </span>
+    <nav class="navbar fixed-top" style="max-width:80%; margin:auto; background-color: rgb(223, 221, 218); height:58px">
         <h1><strong>{% block page_title %} {% endblock %}</strong></h1>
-    </div>
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a class="nav-link {% block active_index %}{% endblock %}" href="/">Página Inicial</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  {% block active_directors %}{% endblock %}" href="/directors">Diretores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link  {% block active_all_films %}{% endblock %}" href="/all_films">Filmes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Minhas tentativas</a>
+            </li>
+          </ul>
+    </nav>
     <!-- <hr> -->
     {% block header_image %}{% endblock %}
     

@@ -4,16 +4,18 @@
 
 {% block page_title %}Filmes{% endblock %}
 
-{% block header_image %}<div class="header_image" style="background-image:url(/static/images/The_apartment_header.jpg); background-position: center -10px;"></div> {% endblock %}
+{% block header_image %}<div class="header_image" style="background-image:url(/static/images/the_apartment_header.jpg); background-position: center -10px;"></div> {% endblock %}
 
 {% block content %}
+
+{% block active_all_films %}active{% endblock %}
 <br>
-<h3>But what is a good movie...</h3>
-<p>That question is yet to be answered with any real precision. For now, my preferences will suffice.</p>
+<h3>Quais são os bons filmes...</h3>
+<p>Essa pergunta ainda está para ser respondida com alguma precisão. Por enquanto minhas opiniões são suficientes...</p>
     <div class="film_grid">
         {% for name in directors %}
         {% for film in directors[name] %}
-        <div class="card" style="width: auto; margin: 15px; background-color:">
+        <div class="card" style="width: auto; margin: 15px; background-color: white">
             <img src="/static/images/films/{{film.replace(' ', '_')}}.jpg" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{film.title()}}</h5>
