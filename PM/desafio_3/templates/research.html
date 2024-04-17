@@ -12,28 +12,29 @@
 <br><br><br>
 <div class="quiz_page">
 
-    <h1 id="quiz_title">Pesquisa de preferências cinematográficas</h1>
+    <h1 id="quiz_title">Teste seus conhecimentos cinematográficos</h1>
     <br>
     <form class="question_box" action="/get_answer" method="POST">
-        {% for i in range(1, 6) %}
-        <h3 class="num_question">Questão {{i}}</h3>
+    {% for key, value in perguntas.items() %}
+    <h3 class="num_question">Questão {{key}}</h3>
+    
+    <p class="question_script">{{value[0]}}</p>
 
-        <p class="question_script">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <div class="quiz_option">
+                <input type="radio" id="A{{key}}" name="answer{{key}}" value="A">
+                <label for="A{{key}}">{{value[1]}}</label>
+                <br>
+                <input type="radio" id="B{{key}}" name="answer{{key}}" value="B">
+                <label for="B{{key}}">{{value[2]}}</label>
+                <br>
+                <input type="radio" id="C{{key}}" name="answer{{key}}" value="C">
+                <label for="C{{key}}">{{value[3]}}</label>
+                <br>
+                <input type="radio" id="D{{key}}" name="answer{{key}}" value="D">
+                <label for="D{{key}}">{{value[4]}}</label>
+            </div>
+            <br><br>
 
-        <div class="quiz_option">
-            <input type="radio" id="A{{i}}" name="answer{{i}}" value="A">
-            <label for="A{{i}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </label>
-            <br>
-            <input type="radio" id="B{{i}}" name="answer{{i}}" value="B">
-            <label for="B{{i}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </label>
-            <br>
-            <input type="radio" id="C{{i}}" name="answer{{i}}" value="C">
-            <label for="C{{i}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </label>
-            <br>
-            <input type="radio" id="D{{i}}" name="answer{{i}}" value="D">
-            <label for="D{{i}}">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </label>
-        </div>
-        <br><br>
     {% endfor %}
         
         <button type="submit" value="submit">Enviar</button>

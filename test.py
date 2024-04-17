@@ -1,11 +1,7 @@
 import json
-directors = json.load(open("./PM/desafio_3/templates/directors_films.json"))
-key_words_directors, key_words_films = [], []
-for d in directors:
-    for n in d.split("_"):
-        key_words_directors.append(n)
-        print(key_words_directors)
-key_words_films += [" ".split(f) for d in directors for f in d]
+perguntas = json.load(open("./PM/desafio_3/templates/questions.json", encoding="UTF-8"))
+
+for key, value in perguntas.items():
+    print(f"questão{key}")
 
 
-print("david" in key_words_directors)

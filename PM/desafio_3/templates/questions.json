@@ -1,37 +1,46 @@
 {
-    "Questão 1":[
-        "Enunciado da questão 1",
-        "Alternativa A",
-        "Alternativa B",
-        "Alternativa C",
-        "Alternativa D",
-        "Alternativa correta"
+    "1":[
+        "Qual destes filmes foi lançado em 1960?",
+        "2001 uma odisseia no espaço",
+        "Clube da Luta",
+        "Barry Lyndon",
+        "A General",
+        "A"
     ],
 
-    "Questão 2": [
-        "Enunciado a questão 2",
-        "Alternativa A",
-        "Alternativa B",
-        "Alternativa C",
-        "Alternativa D",
-        "Alternativa correta"
+    "2": [
+        "Qual destes filmes não foi dirigido pelos Irmãos Cohen",
+        "O Grande Lebowski",
+        "A Grande Aposta",
+        "Queime depois de ler",
+        "Fargo",
+        "B"
     ],
 
-    "Questão 3": [
-        "Enunciado a questão 3",
-        "Alternativa A",
-        "Alternativa B",
-        "Alternativa C",
-        "Alternativa D",
-        "Alternativa correta"
+    "3": [
+        "Qual destes filmes é considerado o melhor filme da história?",
+        "Possessão",
+        "Laranja Mecânica",
+        "Cidadão Kane",
+        "Taxi Driver",
+        "C"
     ],
 
-    "Questão 4": [
-        "Enunciado a questão 4",
-        "Alternativa A",
-        "Alternativa B",
-        "Alternativa C",
-        "Alternativa D",
-        "Alternativa correta"
+    "4": [
+        "Qual destes filmes é um filme sobre vingança?",
+        "O Farol",
+        "Dogville",
+        "Um dia de cão",
+        "Oldboy",
+        "D"
+    ],
+
+    "5":[
+        "Qual destes filmes não é do século XX?",
+        "Magnolia",
+        "O silêncio dos inocentes",
+        "E aí, irmão, cadê você?",
+        "Mank",
+        "D"
     ]
 }

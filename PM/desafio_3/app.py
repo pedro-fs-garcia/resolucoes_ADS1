@@ -3,6 +3,7 @@ import json
 
 app = Flask(__name__)
 
+perguntas = json.load(open("./templates/questions.json", encoding = "UTF-8"))
 
 @app.route("/")
 def home_page():
@@ -21,12 +22,18 @@ def get_page(name):
 
 @app.route("/get_answer", methods=["POST", "GET"])
 def get_answer():
-    perguntas = json.load(open("./templates/questions.json"))
     respostas={}
-    for i in range(1,6):
+    acertos = 0
+    for i in range(1, len(perguntas)+1):
         respostas[f"answer{i}"] = request.form[f"answer{i}"]
     
-    return f"<p>{respostas.values()}</p>"
+    for i in range(1, len(perguntas)+1):
+        if perguntas[f"Questão {i}"][5] == respostas[f"answer{i}"]:
+            acertos += 1
+    
+    return f"<h1>você teve {acertos} acertos</h1>"
+    
+    # return f"<p>{respostas}</p>"
 
 
 
