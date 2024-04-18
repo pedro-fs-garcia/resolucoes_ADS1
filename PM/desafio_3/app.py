@@ -37,7 +37,7 @@ def get_answer():
     erros = len(perguntas) - acertos
     porcentagem = f"{acertos/len(perguntas) * 100}%"
 
-    return f"<h1>você teve {acertos} acertos</h1><h2>Aproveitamento: {porcentagem}."
+    return render_template("result.html", acertos=acertos, erros=erros, porcentagem=porcentagem)
 
 
 
