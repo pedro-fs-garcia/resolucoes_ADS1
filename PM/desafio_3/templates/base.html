@@ -9,8 +9,8 @@
 </head>
 <body class="base_body">
     <!-- header -->
-    <nav class="navbar fixed-top" style="max-width:80%; margin:auto; background-color: rgb(223, 221, 218); height:56px">
-
+    <div style="max-width:100%; background-color:rgb(223, 221, 218)">
+    <nav class="navbar fixed-top" style="max-width:80%; margin:auto; background-color: rgb(223, 221, 218); height:fit-content">
       <h1><strong>{% block page_title %} {% endblock %}</strong></h1>
         <ul class="nav nav-tabs">
             <li class="nav-item">
@@ -34,8 +34,9 @@
               </form>
             </li>
           </ul>
-    </nav>
-    <br>
+        </nav>
+      </div>
+        <br><br>
     <!-- <hr> -->
     {% block header_image %}{% endblock %}
     

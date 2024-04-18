@@ -26,7 +26,7 @@ body{
 .home{
     max-width:60%;
     margin: 45px auto 0;
-    background-image:url(../static/imagens/fundo.png);
+    background:url(../static/imagens/fundo.png);
     background-attachment:local;
 }
 
