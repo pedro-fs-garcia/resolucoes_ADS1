@@ -31,12 +31,11 @@ def get_answer():
             respostas[f"answer{i}"] = ""
     
     for i in range(1, len(perguntas)+1):
-        if perguntas[f"{i}"][5] == respostas[f"answer{i}"]:
+        if perguntas[str(i)][5] == respostas[f"answer{i}"]:
             acertos += 1
     
     return f"<h1>você teve {acertos} acertos</h1>"
-    
-    # return f"<p>{respostas}</p>"
+
 
 
 
