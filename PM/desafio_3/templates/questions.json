@@ -9,7 +9,7 @@
     ],
 
     "2": [
-        "Qual destes filmes não foi dirigido pelos Irmãos Cohen",
+        "Qual destes filmes não foi dirigido pelos Irmãos Coen?",
         "O Grande Lebowski",
         "A Grande Aposta",
         "Queime depois de ler",
@@ -19,7 +19,7 @@
 
     "3": [
         "Qual destes filmes é considerado o melhor filme da história?",
-        "Possessão",
+        "O homem elefante",
         "Laranja Mecânica",
         "Cidadão Kane",
         "Taxi Driver",
@@ -36,7 +36,7 @@
     ],
 
     "5":[
-        "Qual destes filmes não é do século XX?",
+        "Qual destes filmes é do século XX?",
         "Magnolia",
         "O silêncio dos inocentes",
         "E aí, irmão, cadê você?",
@@ -51,5 +51,32 @@
         "Star Wars",
         "Alien",
         "A"
+    ],
+
+    "7": [
+        "Quais dos filmes a seguir foram dirigidos pela mesma pessoa?",
+        "Barba Ruiva e O rei da comédia",
+        "Zodíaco e Boogie Nights",
+        "O Mestre e Babilônia",
+        "Lady Vingança e Stoker",
+        "D"
+    ],
+
+    "8": [
+        "Quem dirigiu o filme 'Após Horas'?",
+        "Martin Scorsese",
+        "Robert Eggers",
+        "Akira Kurosawa",
+        "Lars Von Trier",
+        "A"
+    ],
+
+    "9": [
+        "Qual destes filmes é um documentário?",
+        "Zelig",
+        "F for Fake",
+        "Garota Exemplar",
+        "Sangue Negro",
+        "B"
     ]
 }
