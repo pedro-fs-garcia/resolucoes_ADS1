@@ -3,7 +3,7 @@ import json
 
 app = Flask(__name__)
 
-perguntas = json.load(open("./templates/questions.json", encoding = "UTF-8"))
+perguntas = json.load(open("./static/questions.json", encoding = "UTF-8"))
 
 @app.route("/")
 def home_page():
@@ -12,8 +12,8 @@ def home_page():
 
 @app.route("/<name>")
 def get_page(name):
-    directors = json.load(open("./templates/directors_films.json", encoding="UTF-8"))
-    perguntas = json.load(open("./templates/questions.json", encoding="UTF-8"))
+    directors = json.load(open("./static/directors_films.json", encoding="UTF-8"))
+    perguntas = json.load(open("./static/questions.json", encoding="UTF-8"))
     if name == "home":
         return render_template(f"index.html", directors = directors, perguntas=perguntas)
 
