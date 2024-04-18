@@ -34,7 +34,10 @@ def get_answer():
         if perguntas[str(i)][5] == respostas[f"answer{i}"]:
             acertos += 1
     
-    return f"<h1>você teve {acertos} acertos</h1>"
+    erros = len(perguntas) - acertos
+    porcentagem = f"{acertos/len(perguntas) * 100}%"
+
+    return f"<h1>você teve {acertos} acertos</h1><h2>Aproveitamento: {porcentagem}."
 
 
 
