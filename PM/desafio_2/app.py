@@ -4,19 +4,13 @@ app = Flask(__name__)
 
 
 @app.route("/")
-@app.route("/index")
 @app.route("/home")
 def home_page():
     return render_template("index.html")
 
-@app.route("/quemsomos")
-def quemsomos():
-    return render_template("quemsomos.html")
-
-
-@app.route("/contatos")
-def contatos():
-    return render_template("contatos.html")
+@app.route("/<name>")
+def pagina(name):
+    return render_template(f"{name}.html")
 
 
 

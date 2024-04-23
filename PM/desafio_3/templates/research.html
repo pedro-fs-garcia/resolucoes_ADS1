@@ -33,11 +33,12 @@
                 <input type="radio" id="D{{key}}" name="answer{{key}}" value="D">
                 <label for="D{{key}}">{{value[4]}}</label>
             </div>
+            <button type="button" class="btn" style="float:right" data-bs-toggle="popover" title="Dica para resolver a questão" data-bs-content="{{value[6]}}">dica...</button>
             <br><br>
 
     {% endfor %}
         
-        <button type="submit" value="submit">Enviar</button>
+        <button type="submit" class="btn btn-lg active" value="submit">Enviar</button>
     </form>
     
     </div>
