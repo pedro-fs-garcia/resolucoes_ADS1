@@ -123,7 +123,6 @@ summary{
 
 .film_grid{
     display:grid;
-    grid
     grid-template-columns:auto auto auto auto auto;
     width: 100%;
     padding:auto;
