@@ -12,10 +12,10 @@
 
 
 <br>
-    <h2 id="diretores_titulo">They take the blame and hold the glory...</h2>
+    <h2 id="diretores_titulo">Eles levam a culpa e ficam com o crédito...</h2>
 
-    <p style="margin-left: 45px;">This list does not frame the best directors, nor should all good directors be framed here. Some have many movies in the list, others have only one. Some have none, and others that have many are not here. I, here, do not judge the movies, but the directing. For this serves the sole purpose of reminding myself of a few ones.</p>
-    <p style="margin-left: 45px;">My criteria are completely subjective...</p>
+    <p style="margin-left: 45px;">Essa lista não comporta os melhores, nem deveriam todos os bons diretores estar aqui. Alguns têm muitos filmes na lista, outros têm um. Ainda outros têm nenhum, e outros têm muitos que não estão listados. Eu, aqui, não avalio os filmes, mas a direção. Pois isso serve ao único propósito de me lembrar de alguns poucos.</p>
+    <p style="margin-left: 45px;">Meus critérios são totalmente subjetivos...</p>
     <br>
 
 
@@ -23,14 +23,14 @@
         {% for name in directors %}
             {% if name != "others" %}
             <div class="director_details">
-                <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#multicollapseExample{{name}}" aria-expanded="false" aria-controls="multicollapseExample{{name}}">
+                <button class="btn" data-bs-toggle="collapse" data-bs-target="#collapse{{name}}" aria-controls="collapse{{name}}" role="button">
                     <h3 style="margin:2px; text-align:left">{{name.replace("_", " ").title()}}</h3>
                     <div class="director_summary">
                         <img class="director_image" src="/static/images/directors/{{name}}.jpg">
                         <div style="margin:auto 15px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae repellendus perspiciatis natus reiciendis eaque repudiandae consectetur corrupti sequi blanditiis maiores, necessitatibus magnam, asperiores recusandae, aliquam esse? Quaerat quos aperiam reiciendis.</div>
                     </div>
                 </button>
-                <div class="collapse multi-collapse" id="multicollapseExample{{name}}">
+                <div class="collapse" id="collapse{{name}}">
                     <div class="film_grid" >
                         {% for poster in directors[name] %}
                         <figure class="film_item"><a href="#" target="_blank" style="text-align:center">
