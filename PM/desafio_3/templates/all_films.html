@@ -12,14 +12,16 @@
 <br>
 <h3>Quais são os bons filmes...</h3>
 <p>Essa pergunta ainda está para ser respondida com alguma precisão. Por enquanto minhas opiniões são suficientes...</p>
-    <div class="film_grid">
+    <div class="row">
         {% for name in directors %}
         {% for film in directors[name] %}
-        <div class="card" style="width: auto; margin: 15px; background-color: white">
-            <img src="/static/images/films/{{film.replace(' ', '_')}}.jpg" class="card-img-top" alt="...">
+        <div class=" col-sm" style="margin-bottom: 30px;">
+        <div class="card" style="height:fit-content; width:190px; margin: auto; background-color: white">
+            <img src="/static/images/films/{{film.replace(' ', '_')}}.jpg" class="card-img-top" alt="..." style="height:250px">
             <div class="card-body">
               <h5 class="card-title">{{film.title()}}</h5>
             </div>
+        </div>
         </div>
         {% endfor %}
         {%endfor%}

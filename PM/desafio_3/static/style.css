@@ -1,18 +1,5 @@
-@media screen and (min-width: 400px) {
-    body {
-      background-color: lightgreen;
-    }
-  }
-  
-  @media screen and (min-width: 800px) {
-    body {
-      background-color: lavender;
-    }
-  }
-
 .base_body{
-    max-width: 80%;
-    margin: 0px auto 45px;
+    max-width: 90%;
     font-family:'Courier New', Courier, monospace;
     background-color:rgb(223, 221, 218)
 }
@@ -62,11 +49,8 @@
 } */
 
 .biography{
-    display:grid;
-    align-items:center;
-    grid-template-columns:auto 1fr;
-    column-gap: 50px;
-    margin-top: 30px;
+    max-width:80%;
+    align-content: center;
 }
 
 .biography h2{
@@ -77,7 +61,6 @@
 .director_details{
     background-color: #99928a;
     padding: 2px;
-    margin: 30px 0 0 0;
     box-shadow: 2px 4px 10px #333131;
 }
 
@@ -104,15 +87,13 @@ summary{
 }
 
 .director_summary{
-    display:grid;
-    grid-template-columns:auto 1fr;
-    flex: 34px;
     padding: 4px;
-    width: 100%;
+    width: 101.5%;
     background-color: #cac8c3;
     border: none;
     box-shadow: 1px 1px 1px #bbbbbb;
     cursor:pointer;
+    margin:auto;
 }
 
 
@@ -142,3 +123,14 @@ summary{
     text-align: center;
 }
 
+@media (max-width:767px){
+    .base_body .biography .director_summary .col{
+        font-size:small;
+    }
+}
+
+@media (max-width:767px){
+    .director_details{
+        max-width:90%;
+    }
+}

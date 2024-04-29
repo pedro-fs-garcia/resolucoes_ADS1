@@ -14,8 +14,8 @@
 <br>
     <h2 id="diretores_titulo">Eles levam a culpa e ficam com o crédito...</h2>
 
-    <p style="margin-left: 45px;">Essa lista não comporta os melhores, nem deveriam todos os bons diretores estar aqui. Alguns têm muitos filmes na lista, outros têm um. Ainda outros têm nenhum, e outros têm muitos que não estão listados. Eu, aqui, não avalio os filmes, mas a direção. Pois isso serve ao único propósito de me lembrar de alguns poucos.</p>
-    <p style="margin-left: 45px;">Meus critérios são totalmente subjetivos...</p>
+    <p>Essa lista não comporta os melhores, nem deveriam todos os bons diretores estar aqui. Alguns têm muitos filmes na lista, outros têm um. Ainda outros têm nenhum, e outros têm muitos que não estão listados. Eu, aqui, não avalio os filmes, mas a direção. Pois isso serve ao único propósito de me lembrar de alguns poucos.</p>
+    <p>Meus critérios são totalmente subjetivos...</p>
     <br>
 
 
@@ -25,15 +25,19 @@
             <div class="director_details">
                 <button class="btn" data-bs-toggle="collapse" data-bs-target="#collapse{{name}}" aria-controls="collapse{{name}}" role="button">
                     <h3 style="margin:2px; text-align:left">{{name.replace("_", " ").title()}}</h3>
-                    <div class="director_summary">
+                    <div class="director_summary row">
+                        <div class="col-2">
                         <img class="director_image" src="/static/images/directors/{{name}}.jpg">
-                        <div style="margin:auto 15px;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae repellendus perspiciatis natus reiciendis eaque repudiandae consectetur corrupti sequi blanditiis maiores, necessitatibus magnam, asperiores recusandae, aliquam esse? Quaerat quos aperiam reiciendis.</div>
+                        </div>
+                        <div class="col-8" style="margin:auto">
+                        <p style="margin:auto 15px">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae repellendus perspiciatis natus reiciendis eaque repudiandae consectetur corrupti sequi blanditiis maiores, necessitatibus magnam, asperiores recusandae, aliquam esse? Quaerat quos aperiam reiciendis.</p>
+                        </div>
                     </div>
                 </button>
                 <div class="collapse" id="collapse{{name}}">
-                    <div class="film_grid" >
+                    <div class="row" >
                         {% for poster in directors[name] %}
-                        <figure class="film_item"><a href="#" target="_blank" style="text-align:center">
+                        <figure class="film_item col-sm"><a href="#" target="_blank" style="text-align:center">
                             <img class="film_poster" src="/static/images/films/{{poster.replace(' ', '_')}}.jpg"><br>{{poster.title()}}
                         </a></figure>
                         {% endfor %}
@@ -42,6 +46,7 @@
             {% endif %}
                 <br>
             </div>
+        <br>
         {% endfor %}
         </div>  
 

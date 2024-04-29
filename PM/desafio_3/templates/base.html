@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css"> 
     <title> {% block title %} {% endblock %} </title>
   </head>
-<body class="base_body">
+<body class="base_body container-fluid mt-3">
     <!-- header -->
-    <div style="max-width:100%; background-color:rgb(223, 221, 218)">
-    <nav class="navbar fixed-top" style="max-width:80%; margin:auto; background-color: rgb(223, 221, 218); height:fit-content">
+    <div class="row" style="max-width:100%; background-color:rgb(223, 221, 218)">
+    <nav class="navbar fixed-top" style="width:90%; margin: auto; background-color: rgb(223, 221, 218); height:fit-content">
       <h1><strong>{% block page_title %} {% endblock %}</strong></h1>
         <ul class="nav nav-tabs">
             <li class="nav-item">
