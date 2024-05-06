@@ -1,21 +1,10 @@
-import string
+l = [1, 2, 2, 3, 2, 2, 4]
 
-def matriz_letras(n_letras):
-    if n_letras <= 0:
-        return []
-
-    characters = string.ascii_lowercase
-    matriz = []
-
-    for i in range(n_letras * 2 - 1):
-        row = [characters[max(abs(n_letras - i - 1), abs(n_letras - (n_letras * 2 - i - 1)))] for _ in range(n_letras * 2 - 1)]
-        matriz.append(row)
-
-    return matriz
-
-# Exemplo de uso:
-matriz = matriz_letras(3)
-for row in matriz:
-    print(row)
+f = (0,0)
+for i in set(l):
+    freq = l.count(i)
+    if freq > f[1]:
+        f=(i, l.count(i))
 
 
+print(f[0])

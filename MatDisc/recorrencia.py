@@ -12,7 +12,7 @@ def cos(x, k):
         b = b*(2*i-1)*(2*i)
     return soma
 print(cos(math.pi/3, 15))
-print(math.cos(math.pi/2))
+print(math.cos(math.pi/3))
 print("---")
 
 
